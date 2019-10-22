@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto:300,400,700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 12px;
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.2rem;
+    color: #000;
+    background-color: #683e98;
+    background-image: url(../img/bg_t.png), linear-gradient(to right, #683e98, #ab70af);
+    background-repeat: no-repeat, repeat;
+    background-position: center, center;
+    background-size: cover;
+
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 750px;
+    width: 90%;
+}
+
+header{
+    font-family: Roboto, sans-serif;
+    color: #fff;
+    padding: 25px 0;
+    font-weight: 300;
+    
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a, button{
+    transition: all .25s ease-in;
+    text-decoration: none;
+}
+
+.menu{
+    list-style: none;
+    padding: 0;
+}
+
+.menu__item{
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.menu__link{
+    text-transform: uppercase;
+    color: #fff;
+    padding: 5px;
+    border-bottom: 1px solid transparent;
+}
+
+.menu__link:hover,
+.menu__link:active,
+.menu__link:focus{
+    border-color: #fff;
+}
+
+.burger{
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    background-image: url(../img/btn_menu.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.burger:hover,
+.burger:focus,
+.burger:active,
+.logo:hover,
+.logo:focus,
+.logo:active{
+    opacity: .4;
+}
+
+main{
+    padding: 30px 0;
+}
+
+.card{
+    min-height: 430px;
+    background-color: #fff;
+    position: relative;
+    display: flex;
+}
+
+.card:before,
+.card:after{
+    content: '';
+    background-color: #fff;
+    opacity: .3;
+    position: absolute;
+    z-index: -1;
+}
+
+.card:before{
+    top: 10px;
+    right: -15px;
+    bottom: 10px;
+    left: -15px;
+}
+
+.card:after{
+    top: 20px;
+    right: -30px;
+    bottom: 20px;
+    left: -30px;
+}
+
+.card__galery{
+    width: 65%;
+    background: #f4f4f4;
+    background-image: url(../img/bg.png), linear-gradient(to bottom, #ede9ec 0%, #f5f5f5 30%);
+    background-repeat: no-repeat, repeat;
+    background-position: 0 25%, center;
+    position: relative;
+   
+}
+
+.card__img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    max-width: 90%;
+    max-height: 70%;
+    z-index: 2;
+}
+
+.card__info{
+    width: 35%;
+    padding: 45px 30px;
+}
+
+.card__model{
+    color:#fff;
+    font-size: 5.2rem;
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -150%);
+    z-index: 1;
+max-width: 90%;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+}
+
+.card__previews{
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    min-height: 60px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.card__preview{
+    display: inline-block;
+    margin: 5px;
+    border: 2px solid #fff;
+    font-size: 0;
+}
+
+.card__preview:hover,
+.card__preview:focus,
+.card__preview:active{
+    opacity: .5;
+}
+
+.card__badge{
+    font-family: Roboto, sans-serif;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    background-color: #ffa60d;
+    color: #fff;
+    padding: 7px;
+}
+
+.card__title{
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.card__subtitle{
+    vertical-align: middle;
+    margin-right: 1em;
+}
+
+.card__title a{
+    color:#5e4fff;
+}
+
+.card__title a:hover,
+.card__title a:focus,
+.card__title a:active{
+    color:#a200af
+}
+
+.stars{
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.stars2{
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0;
+    
+}
+
+.star{
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background-image: url(../img/star.svg);
+    /* background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; */
+}
+
+.stars2 li{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-image: url(../img/star.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: -1px 0;
+}
+
+
+[data-stars='0'] .star:nth-child(n+1),
+[data-stars='1'] .star:nth-child(n+2),
+[data-stars='2'] .star:nth-child(n+3),
+[data-stars='3'] .star:nth-child(n+4),
+[data-stars='4'] .star:nth-child(n+5){
+    opacity: .4;
+}
+
+.card__price{
+    font-size: 1.8rem;
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    margin: 20px 0;
+}
+
+
+
+.card__price:before{
+    content: '$'
+}
+
+[data-currency="uah"] .card__price:before{
+    content: '₴'
+}
+
+.sizes__list{
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+
+/* .sizes__list:after{
+    content: '';
+    flex: auto;
+} */
+
+.sizes__item{
+    display: inline-block;
+
+}
+
+.sizes__link{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border: 1px solid transparent;
+    text-align: center;
+    line-height: 24px;
+    font-size: 1.2rem;
+    color: #000;
+    
+}
+
+.sizes__link:hover,
+.sizes__link:focus,
+.sizes__link:active
+.sizes__link--active{
+    border-color: #000;
+}
+
+.card__buttons{
+    margin: 30px 0;
+    display: inline-block;
+}
+
+.btn{
+    text-transform: uppercase;
+    color: #000;
+    font-size: 1rem;
+    padding: 10px 25px;
+    display: block;
+    border: 1px solid #000;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active{
+    background-color: #000;
+    color: #fff;
+}
+
+.btn--accent{
+    background-color: #a200b8;
+    border-color: #a200af;
+    color: #fff;
+}
+
+.btn--accent:hover,
+.btn-accent:focus,
+.btn--accent:active{
+    color: #a200af;
+    background-color: #fff;
+}
